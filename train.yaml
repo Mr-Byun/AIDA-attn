@@ -1,0 +1,33 @@
+# 학습 후 모델이 저장되는 디렉토리/파일명
+RESULT_DIR: NULL
+# 모델 load; 학습없이 평가만 진행함
+MODEL_PATH: NULL
+
+# 데이터전처리가 완료된 데이터
+DATA_X: "data/original_sectemp_X.npy"
+DATA_Y: "data/data_y.npy"
+# Rolling window 설정
+WINDOW_SIZE: 120
+WINDOW_STEPSIZE: 60
+
+# 변수 갯수
+INPUT_DIM: 4
+# Spatial attention MLP unit 개수
+SPATIAL_DIM: 64
+# Temporal attention MLP unit 개수
+TEMPORAL_DIM: 64
+# LSTM unit 개수
+LSTM_DIM: 64
+# Final MLP unit 개수
+PREOUT_DIM: 32
+
+# Earlystopping patience; LR reduce on plateau는 ES_PATIENCE/2
+ES_PATIENCE: 20
+BATCH_SIZE: 8
+# Max epochs
+EPOCHS: 10
+
+# Attention visualization 저장 디렉토리
+VIZ_DIR: NULL
+# Visualization에 사용될 랜덤 샘플 개수 (Test 샘플)
+VIZ_SAMPLE: NULL
